@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azərbaycanda Rəsmi Poker</title>
+  <title>Azərbaycanda Ən Yaxşı Poker</title>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,449 +18,208 @@
     fbq('init', '1596345781609399');
     fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * {margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: Inter, Arial, sans-serif;
-      background: #050505;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .page {
-      min-height: 100vh;
-      position: relative;
-      background:
-        radial-gradient(circle at 18% 20%, rgba(244, 199, 107, 0.2), transparent 32%),
-        radial-gradient(circle at 82% 18%, rgba(160, 20, 20, 0.25), transparent 35%),
-        linear-gradient(135deg, #050505 0%, #101010 55%, #020202 100%);
-    }
-
-    .page::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 44px 44px;
-      pointer-events: none;
+      background:#050505;
+      color:#fff;
     }
 
     .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
+      width:min(1200px,92%);
+      margin:0 auto;
     }
 
     header {
-      padding: 28px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding:30px 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
     .logo {
-      font-weight: 900;
-      letter-spacing: 1px;
-      font-size: 22px;
-      color: #f4c76b;
-    }
-
-    .badge {
-      border: 1px solid rgba(244, 199, 107, 0.35);
-      padding: 10px 16px;
-      border-radius: 999px;
-      color: #f4c76b;
-      background: rgba(244, 199, 107, 0.08);
-      font-size: 14px;
+      font-size:22px;
+      font-weight:900;
+      color:#f4c76b;
     }
 
     .hero {
-      min-height: calc(100vh - 86px);
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 50px;
-      padding: 50px 0 70px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      color: #f4c76b;
-      background: rgba(244, 199, 107, 0.1);
-      border: 1px solid rgba(244, 199, 107, 0.3);
-      padding: 10px 16px;
-      border-radius: 999px;
-      margin-bottom: 24px;
-      font-weight: 700;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:50px;
+      min-height:90vh;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 82px);
-      line-height: 0.95;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
+      font-size:64px;
+      line-height:1;
+      margin-bottom:20px;
     }
 
     h1 span {
-      background: linear-gradient(90deg, #fff, #f4c76b, #b8872c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background:linear-gradient(90deg,#fff,#f4c76b);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
     .subtitle {
-      font-size: clamp(18px, 2vw, 24px);
-      line-height: 1.5;
-      color: #d6d6d6;
-      max-width: 650px;
-      margin-bottom: 18px;
+      font-size:22px;
+      color:#ccc;
+      margin-bottom:15px;
     }
 
     .description {
-      color: #a9a9a9;
-      font-size: 17px;
-      line-height: 1.7;
-      max-width: 620px;
-      margin-bottom: 36px;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      flex-wrap: wrap;
+      color:#aaa;
+      margin-bottom:30px;
+      line-height:1.6;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: #111;
-      font-weight: 900;
-      font-size: 18px;
-      padding: 18px 32px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #ffe08a, #d69b2d);
-      box-shadow:
-        0 20px 60px rgba(214, 155, 45, 0.35),
-        inset 0 1px 0 rgba(255,255,255,0.7);
-      transition: 0.25s ease;
+      display:inline-block;
+      padding:18px 32px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#ffe08a,#d69b2d);
+      color:#111;
+      font-weight:900;
+      text-decoration:none;
+      transition:0.2s;
     }
 
     .btn:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 28px 80px rgba(214, 155, 45, 0.5);
+      transform:translateY(-3px);
     }
 
-    .trust {
-      color: #bfbfbf;
-      font-size: 14px;
-    }
-
+    /* Cards visual */
     .visual {
-      position: relative;
-      height: 560px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .glow {
-      position: absolute;
-      width: 430px;
-      height: 430px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(244,199,107,0.35), transparent 68%);
-      filter: blur(10px);
+      position:relative;
+      height:500px;
     }
 
     .card {
-      width: 210px;
-      height: 300px;
-      background: linear-gradient(145deg, #fff, #d7d7d7);
-      border-radius: 22px;
-      position: absolute;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,255,255,0.6);
+      width:180px;
+      height:260px;
+      border-radius:20px;
+      background:white;
+      position:absolute;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:40px;
+      font-weight:900;
+      box-shadow:0 30px 100px rgba(0,0,0,0.6);
     }
 
-    .card::before,
-    .card::after {
-      position: absolute;
-      font-weight: 900;
-      font-size: 42px;
-    }
+    .card.a {transform:rotate(-15deg); left:50px;}
+    .card.k {transform:rotate(15deg); right:50px; color:red;}
 
-    .card::before {
-      top: 20px;
-      left: 22px;
-    }
-
-    .card::after {
-      bottom: 20px;
-      right: 22px;
-      transform: rotate(180deg);
-    }
-
-    .card.a {
-      transform: rotate(-16deg) translateX(-90px);
-      z-index: 3;
-    }
-
-    .card.a::before,
-    .card.a::after {
-      content: "A♠";
-      color: #111;
-    }
-
-    .card.k {
-      transform: rotate(13deg) translateX(90px) translateY(18px);
-      z-index: 2;
-    }
-
-    .card.k::before,
-    .card.k::after {
-      content: "K♥";
-      color: #b80f1d;
-    }
-
-    .chip {
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, #111 0 28%, transparent 29%),
-        repeating-conic-gradient(#b80f1d 0 15deg, #fff 15deg 28deg);
-      border: 12px solid #d69b2d;
-      bottom: 72px;
-      left: 55px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-      z-index: 5;
-    }
-
+    /* Advantages */
     .advantages {
-      padding: 0 0 80px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .advantages-title {
-      font-size: clamp(30px, 4vw, 52px);
-      margin-bottom: 28px;
-      letter-spacing: -2px;
-    }
-
-    .advantages-title span {
-      color: #f4c76b;
+      padding:80px 0;
     }
 
     .advantages-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
     }
 
     .advantage {
-      padding: 26px;
-      border-radius: 26px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.025));
-      border: 1px solid rgba(244,199,107,0.16);
-      box-shadow: 0 24px 70px rgba(0,0,0,0.25);
-    }
-
-    .advantage-icon {
-      font-size: 32px;
-      margin-bottom: 16px;
+      background:#111;
+      padding:24px;
+      border-radius:20px;
+      border:1px solid #333;
     }
 
     .advantage h3 {
-      color: #f4c76b;
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .advantage p {
-      color: #c7c7c7;
-      line-height: 1.55;
-      font-size: 15px;
+      color:#f4c76b;
+      margin-bottom:10px;
     }
 
     .bottom-cta {
-      margin-top: 34px;
-      padding: 36px;
-      border-radius: 30px;
-      background:
-        linear-gradient(135deg, rgba(184,15,29,0.28), rgba(244,199,107,0.14)),
-        rgba(255,255,255,0.04);
-      border: 1px solid rgba(244,199,107,0.2);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
+      margin-top:40px;
+      text-align:center;
     }
 
-    .bottom-cta h2 {
-      font-size: clamp(26px, 3vw, 40px);
-      margin-bottom: 8px;
-    }
-
-    .bottom-cta p {
-      color: #d0d0d0;
-      font-size: 17px;
-    }
-
-    @media (max-width: 1000px) {
-      .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 35px;
-      }
-
-      .visual {
-        height: 430px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      header {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .card {
-        width: 160px;
-        height: 230px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .advantages-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .bottom-cta {
-        padding: 28px;
-      }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      h1{font-size:42px;}
+      .advantages-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
-    <div class="container">
-      <header>
-        <div class="logo">AZ POKER CLUB</div>
-        <div class="badge">18+ | Azərbaycan</div>
-      </header>
 
-      <section class="hero">
-        <div>
-          <div class="eyebrow">♠ Premium poker otağı</div>
+<div class="container">
 
-          <h1>
-            Azərbaycanda <span>rəsmi poker</span> oynayın
-          </h1>
+<header>
+  <div class="logo">AZ POKER CLUB</div>
+</header>
 
-          <p class="subtitle">
-            Ən yaxşı bonuslar, canlı oyunçular və sürətli giriş ilə etibarlı poker otağı
-          </p>
+<section class="hero">
+  <div>
+    <h1>Azərbaycanda <span>ən yaxşı poker</span> oynayın</h1>
 
-          <p class="description">
-            Bloklanma olmadan, ani qoşulma və Azərbaycandan olan oyunçular üçün tam dəstək ilə ədalətli poker oynayın.
-          </p>
+    <p class="subtitle">
+      Ən yaxşı bonuslar, canlı oyunçular və sürətli giriş ilə etibarlı poker otağı
+    </p>
 
-          <div class="cta-row">
-            <a class="btn" href="https://t.me/+r-V-K0lUnZRlYWVi" target="_blank" onclick="fbq('track', 'Lead');">
-              Telegram-a keç
-            </a>
-            <div class="trust">İndi başlayın Telegram vasitəsilə</div>
-          </div>
-        </div>
+    <p class="description">
+      Bloklanma olmadan, ani qoşulma və Azərbaycandan olan oyunçular üçün tam dəstək ilə ədalətli poker oynayın.
+    </p>
 
-        <div class="visual">
-          <div class="glow"></div>
-          <div class="card a"></div>
-          <div class="card k"></div>
-          <div class="chip"></div>
-        </div>
-      </section>
+    <a class="btn" href="https://t.me/+r-V-K0lUnZRlYWVi" target="_blank" onclick="fbq('track','Lead')">
+      Telegram-a keç
+    </a>
+  </div>
 
-      <section class="advantages">
-        <h2 class="advantages-title">
-          Niyə bizi <span>seçirlər?</span>
-        </h2>
+  <div class="visual">
+    <div class="card a">A♠</div>
+    <div class="card k">K♥</div>
+  </div>
+</section>
 
-        <div class="advantages-grid">
-          <div class="advantage">
-            <div class="advantage-icon">⚡</div>
-            <h3>Ani giriş</h3>
-            <p>Telegram vasitəsilə 1 dəqiqəyə qoşulun və oyuna başlayın.</p>
-          </div>
+<section class="advantages">
+  <div class="advantages-grid">
 
-          <div class="advantage">
-            <div class="advantage-icon">🎁</div>
-            <h3>Xüsusi bonuslar</h3>
-            <p>Yeni oyunçular üçün depozit bonusları və əlavə üstünlüklər.</p>
-          </div>
-
-          <div class="advantage">
-            <div class="advantage-icon">♣</div>
-            <h3>Canlı oyunçular</h3>
-            <p>Cash masalar və turnirlər günün istənilən saatında aktivdir.</p>
-          </div>
-
-          <div class="advantage">
-            <div class="advantage-icon">🛡</div>
-            <h3>Etibarlı sistem</h3>
-            <p>Stabil işləyən platforma və təhlükəsiz oyun mühiti.</p>
-          </div>
-
-          <div class="advantage">
-            <div class="advantage-icon">📞</div>
-            <h3>24/7 dəstək</h3>
-            <p>Hər zaman kömək və sürətli cavab.</p>
-          </div>
-        </div>
-
-        <div class="bottom-cta">
-          <div>
-            <h2>Oyuna başlamağa hazırsınız?</h2>
-            <p>Telegram-a keçin və giriş üçün təlimat alın.</p>
-          </div>
-
-          <a class="btn" href="https://t.me/+r-V-K0lUnZRlYWVi" target="_blank" onclick="fbq('track', 'Lead');">
-            Telegram-a keç
-          </a>
-        </div>
-      </section>
+    <div class="advantage">
+      <h3>Ani giriş</h3>
+      <p>Telegram vasitəsilə 1 dəqiqəyə qoşulun və oyuna başlayın.</p>
     </div>
-  </main>
+
+    <div class="advantage">
+      <h3>Xüsusi bonuslar</h3>
+      <p>Yeni oyunçular üçün depozit bonusları və əlavə üstünlüklər.</p>
+    </div>
+
+    <div class="advantage">
+      <h3>Canlı oyunçular</h3>
+      <p>Cash masalar və turnirlər günün istənilən saatında aktivdir.</p>
+    </div>
+
+    <div class="advantage">
+      <h3>Etibarlı sistem</h3>
+      <p>Stabil işləyən platforma və təhlükəsiz oyun mühiti.</p>
+    </div>
+
+    <div class="advantage">
+      <h3>24/7 dəstək</h3>
+      <p>Hər zaman kömək və sürətli cavab.</p>
+    </div>
+
+  </div>
+
+  <div class="bottom-cta">
+    <a class="btn" href="https://t.me/+r-V-K0lUnZRlYWVi" target="_blank" onclick="fbq('track','Lead')">
+      İndi başla
+    </a>
+  </div>
+</section>
+
+</div>
+
 </body>
 </html>
